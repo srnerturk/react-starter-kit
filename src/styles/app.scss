@@ -1,0 +1,13 @@
+@import 'variables';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  text-rendering: optimizeLegibility;
+}
+body {
+  padding: 30px;
+  background: $primary-color;
+}

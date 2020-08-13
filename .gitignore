@@ -1,0 +1,10 @@
+.next
+node_modules
+.idea
+.DS_Store
+public/ui
+public/sw*
+public/workbox*
+dist
+.dist
+/dist
