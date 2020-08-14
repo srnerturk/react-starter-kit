@@ -5,6 +5,7 @@ import AboutContainer from './containers/about-container';
 import NonAuthContainer from './containers/nonauth-container';
 import NotFoundContainer from './containers/notfound-container';
 import AuthRoute from './components/auth-route';
+import LoginContainer from './containers/login-container';
 
 function RouterTemplate() {
   return (
@@ -23,6 +24,7 @@ function RouterTemplate() {
         <Switch>
           <AuthRoute authed exact path='/' component={HomeContainer} />
           <AuthRoute authed path='/about' component={AboutContainer} />
+          <AuthRoute authed path='/login' component={LoginContainer} />
           <AuthRoute
             authed
             path='/unaouthorized'

@@ -5,7 +5,9 @@ const Input = styled('input')(
   color,
   layout,
   space,
-  { height: 40 },
+  { height: 36 },
+  { width: '100%' },
+  { paddingLeft: '10px' },
   { border: '1px solid #ccc' },
   { borderRadius: 6 }
 );
