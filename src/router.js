@@ -22,7 +22,7 @@ function RouterTemplate() {
       <div className='content-wrapper'>
         <Switch>
           <AuthRoute authed exact path='/' component={HomeContainer} />
-          <AuthRoute authed={false} path='/about' component={AboutContainer} />
+          <AuthRoute authed path='/about' component={AboutContainer} />
           <AuthRoute
             authed
             path='/unaouthorized'
