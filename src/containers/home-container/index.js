@@ -3,7 +3,7 @@ import './style.scss';
 import { StoreContext } from '../../store';
 import types from '../../actions/action-types';
 import Card from '../../components/card';
-import  {Alert}  from '../../icons';
+import { Alert } from '../../icons';
 
 function HomeContainer() {
   const { state, dispatch } = useContext(StoreContext);

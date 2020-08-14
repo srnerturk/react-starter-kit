@@ -1,6 +1,8 @@
 const path = require('path');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -49,6 +51,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, '../public', 'index.html'),
     }),
+    new Dotenv(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
