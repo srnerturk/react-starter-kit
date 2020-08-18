@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 import Button from '../button';
+import ThemeSelector from '../../constants/themes';
 
 function Table({
   data,
@@ -78,6 +79,7 @@ function Table({
         <div className='pager-info'>
           <span>Sayfa:</span>
           <Button
+            theme={ThemeSelector.colors.torusRed}
             disabled={currentPage === 1}
             onClick={() => changeCurrentPage(currentPage - 1)}
             type='button'
@@ -93,6 +95,7 @@ function Table({
             ))}
           </select>
           <Button
+            theme={ThemeSelector.colors.torusRed}
             disabled={currentPage === pages.slice(-1).pop()}
             onClick={() => changeCurrentPage(currentPage + 1)}
             type='button'

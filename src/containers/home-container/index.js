@@ -38,7 +38,7 @@ function HomeContainer() {
   };
   return (
     <div className='home'>
-      <h1>Table Component Demo</h1>
+      <h3>Table Component Demo</h3>
       <Card width='100%' bg='#fff' p={10}>
         <Table
           pagination
