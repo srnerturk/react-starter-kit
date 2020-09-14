@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --config=config/webpack.dev.js --hot",
     "start:reload": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.prod.js",
+    "test": "webpack --config=config/webpack.test.js",
     "lint": "eslint . --cache && echo \"eslint: no lint errors\"",
     "icon": "svgr src/assets/icons -d src/icons --icon",
     "storybook": "start-storybook -p 6006"

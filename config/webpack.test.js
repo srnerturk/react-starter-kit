@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge');
-const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -12,7 +11,7 @@ const common = require('./webpack.common.js');
 const enableBundleAnalyzer = process.env.ENABLE_ANALYZER === 'true';
 
 module.exports = merge(common, {
-  mode: 'production',
+  mode: 'test',
   devtool: 'source-map',
   module: {
     rules: [
@@ -40,14 +39,6 @@ module.exports = merge(common, {
     runtimeChunk: false,
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        TORUS_ENV: JSON.stringify('production'),
-      },
-    }),
-    new Dotenv({
-      path: `./.env.development`,
-    }),
     new CleanWebpackPlugin({
       root: process.cwd(),
       verbose: true,

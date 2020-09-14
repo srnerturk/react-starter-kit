@@ -10,6 +10,8 @@ function HomeContainer() {
     currentPage: 1,
     showRecordsPerPage: 10,
   });
+  console.log(process.env.TORUS_ENV)
+  console.log(process.env.PROJECT_NAME)
   const dataCount = 200;
   useEffect(() => {
     let arr = [];
